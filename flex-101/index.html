@@ -10,7 +10,7 @@
   
 
   
-  <meta name="description" content="前言Flex 是在 CSS3 發佈的屬性，目的是為了讓大家使用 flex 後能更有效率的達成想要的切版效果，像是大家在排版的時候，是不是常常會遇到垂直置中的問題呢？因此有很多人會特別整理出 「垂直置中的 X 個方法」這類型的文章，而今天要介紹的 Flex 排版法，則是其中一種可以方便大家在切版時隨時設定垂直對齊的排版方法。那麼，我們就直接來介紹 Flex 的使用方式吧！">
+  <meta name="description" content="前言Flex 是在 CSS3 發佈的屬性，目的是為了讓大家使用 flex 後能更有效率的達成想要的切版效果，像是大家在排版的時候，是不是常常會遇到垂直置中的問題呢？因此有很多人會特別整理出 「垂直置中的 X 個方法」這類型的文章，而今天要介紹的 Flex 排版法，則是其中一種可以方便大家在切版時隨時">
   
 
   
@@ -84,7 +84,6 @@
     <div class="entry">
       
         <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>Flex 是在 CSS3 發佈的屬性，目的是為了讓大家使用 flex 後能更有效率的達成想要的切版效果，像是大家在排版的時候，是不是常常會遇到垂直置中的問題呢？因此有很多人會特別整理出 「垂直置中的 X 個方法」這類型的文章，而今天要介紹的 Flex 排版法，則是其中一種可以方便大家在切版時隨時設定垂直對齊的排版方法。那麼，我們就直接來介紹 Flex 的使用方式吧！</p>
-<a id="more"></a>
 <h1 id="Flex-的屬性使用教學"><a href="#Flex-的屬性使用教學" class="headerlink" title="Flex 的屬性使用教學"></a>Flex 的屬性使用教學</h1><h2 id="設定父層的-display-為-flex-或-inline-flex"><a href="#設定父層的-display-為-flex-或-inline-flex" class="headerlink" title="設定父層的 display 為 flex 或 inline-flex"></a>設定父層的 display 為 flex 或 inline-flex</h2><p><code>display: flex | inline-flex;</code></p>
 <p>要使用 Flex 排版的物件，首先父層的 display 一定要設定為 flex 或 inline-flex，這樣父層裡的子元件才能吃到 flex 的屬性設定，而屬性值 inline-flex 則能讓父層保有 inline-block 的特性。</p>
 <h2 id="利用-flex-設定父層內的子元件大小（flex-grow、flex-shrink-和-flex-basis）"><a href="#利用-flex-設定父層內的子元件大小（flex-grow、flex-shrink-和-flex-basis）" class="headerlink" title="利用 flex 設定父層內的子元件大小（flex-grow、flex-shrink 和 flex-basis）"></a>利用 flex 設定父層內的子元件大小（flex-grow、flex-shrink 和 flex-basis）</h2><h3 id="flex-grow"><a href="#flex-grow" class="headerlink" title="flex-grow"></a>flex-grow</h3><p>flex-grow 是指當父層的總空間分配給所有子元件後，如果空間還有剩下來的話，設定了 flex-grow 的子元件可以從剩下的空間裡額外得到多少比例的空間，在沒有設定之前 flex-grow 的預設值為 0，表示在沒有設定的狀態下子元件都只會照自己原本的元件空間顯示，不會去佔多餘的父層空間，但是當有子元件被設定了 flex-grow 的時候，父層剩下的空間則會依照子元件們 flex-grow 的總和去分配每個元件額外可以分到多少空間，例如父層的寬度是 300px，而父層的下面有三個子元素，分別是 .a .b 和 .c，這三個子元素的寬度各是 50px，當 flex-grow 沒有設定屬性值或屬性值為 0 的時候，那 .a .b 和 .c 佔據的寬度就會是他們原始的寬，也就是 50px，但當 .a 設定 <code>flex-grow: 1;</code> 時，父層剩下的空間將會分成一等分分給 .a，所以實際呈現的樣子就會是：</p>
